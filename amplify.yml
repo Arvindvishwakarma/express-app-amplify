@@ -1,12 +1,4 @@
 version: 1
-backend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci
-    build:
-      commands:
-        - npm run build
 frontend:
   phases:
     preBuild:
@@ -14,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - echo "Frontend build step for Express.js app"
+        - echo "No build needed for Express.js"
   artifacts:
     baseDirectory: /
     files:
@@ -22,4 +14,3 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
-
